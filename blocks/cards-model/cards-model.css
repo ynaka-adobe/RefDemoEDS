@@ -1,0 +1,215 @@
+.cards-model-container .cards-model-wrapper {
+  max-width: unset;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+/* ========================================
+   Toolbar — filters + nav on the same row
+   ======================================== */
+.cards-model-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 24px 16px;
+}
+
+/* ========================================
+   Filter bar
+   ======================================== */
+.cards-model-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cards-model-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-model-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-white);
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.cards-model-filter-btn:hover {
+  background: var(--color-surface-medium);
+  border-color: var(--color-surface-medium);
+}
+
+.cards-model-filter-btn.active {
+  border-color: var(--color-white);
+}
+
+/* Checkmark — visible only on active button */
+.cards-model-filter-check {
+  display: none;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.cards-model-filter-btn.active .cards-model-filter-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================
+   Nav buttons
+   ======================================== */
+.cards-model-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.cards-model-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+
+.cards-model-nav-btn:hover {
+  background: var(--color-surface-medium);
+  border-color: var(--color-surface-medium);
+}
+
+.cards-model-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   Carousel track
+   ======================================== */
+.cards-model > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 24px;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.cards-model > ul::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   Cards
+   ======================================== */
+.cards-model > ul > li {
+  flex: 0 0 212px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface-dark);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: box-shadow var(--transition-duration) var(--audi-easing);
+}
+
+.cards-model > ul > li[hidden] {
+  display: none;
+}
+
+.cards-model > ul > li:hover {
+  box-shadow: var(--color-border-light) 0 0 0 1px inset;
+}
+
+/* Card body — sits on top */
+.cards-model .cards-model-card-body {
+  padding: 16px 16px 8px;
+  flex-shrink: 0;
+}
+
+.cards-model .cards-model-card-body strong {
+  display: block;
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.cards-model .cards-model-card-body a {
+  display: none;
+}
+
+/* Card image — sits on bottom */
+.cards-model .cards-model-card-image {
+  flex: 1;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.cards-model .cards-model-card-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-model > ul > li img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (width >= 900px) {
+  .cards-model-toolbar {
+    padding-inline: 32px;
+  }
+
+  .cards-model > ul {
+    padding: 0 32px;
+  }
+
+  .cards-model > ul > li {
+    flex: 0 0 220px;
+  }
+
+  .cards-model > ul > li img {
+    height: 148px;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-model",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-02-18T05:40:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.audiusa.com/en/",
+    "originPage": "Audi USA homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "model-grid",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + link",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product/model grid displays",
+      "vehicle lineup pages",
+      "thumbnail card grids"
+    ],
+    "notSuitableFor": [
+      "detailed product cards with long descriptions",
+      "cards without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/en/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-02-18T05:40:00.000Z"
+  }
+}

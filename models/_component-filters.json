@@ -13,6 +13,7 @@
       "button",
       "button",
       "cards",
+      "cards-model",
       "carousel",
       "columns",
       "contentfragment",
@@ -39,6 +40,12 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "cards-model",
+    "components": [
+      "cards-model-item"
     ]
   },
   {
