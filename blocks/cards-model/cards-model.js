@@ -33,6 +33,7 @@ export default function decorate(block) {
 
     if (imageCol) imageCol.className = 'cards-model-card-image';
     if (bodyCol) bodyCol.className = 'cards-model-card-body';
+    if (filterCol) filterCol.className = 'cards-model-card-config';
 
     // Parse list of filter values from 3rd column
     const filterValues = parseFilterValues(filterCol);
@@ -43,9 +44,10 @@ export default function decorate(block) {
       });
     }
 
-    // Body on top, image on bottom
+    // Body on top, image on bottom; keep filterCol in DOM (hidden) for UE authoring
     if (bodyCol) li.append(bodyCol);
     if (imageCol) li.append(imageCol);
+    if (filterCol) li.append(filterCol);
 
     ul.append(li);
   });

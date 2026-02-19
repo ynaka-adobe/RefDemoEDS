@@ -4,6 +4,10 @@
   margin-bottom: 20px;
 }
 
+.cards-model .cards-model-card-config {
+  display: none;
+}
+
 /* ========================================
    Toolbar — filters + nav on the same row
    ======================================== */
